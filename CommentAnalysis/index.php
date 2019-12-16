@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>評論分析系統</title>
+<title>Travelute</title>
 </head>
 
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet"/>
@@ -47,7 +47,7 @@
             	          if ($i < count($data)) {
                 	          echo "<div class='list-item col-6 col-sm-4 col-md-3 col-lg-2'>" .
                         	          "<div class='list-item-img'>" .
-                        	               "<img src='' alt=''>" .
+                        	               '<img src="images/hotel' . ($i + 1) .'.png" alt="">' .
                         	          "</div>" .
                         	          "<a style='display:none;' href=" . $data[$i]['URL'] . "></a>" .
                         	          "<div class='list-item-title'>". $data[$i]['HotelName'] ."</div>" .
@@ -87,6 +87,14 @@
 	        </div>
 	    </div>
 	</div>
+</div>
+<div id="divProgress" style="text-align:center; display: none; position: fixed; top: 50%;  left: 50%;" >
+    <img id="imgLoading" src="images/loading.gif" />
+    <br />
+    <font color="#1B3563" size="6px">資料處理中</font>
+</div>
+<div id="divMaskFrame" style="background-color: #F2F4F7; display: none; left: 0px;
+    position: absolute; top: 0px;">
 </div>
 </body>
 </html>
